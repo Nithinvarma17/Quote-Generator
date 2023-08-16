@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        QUOTES
+    </title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-top: 50px;
+        }
+        #quote{
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        #btn{
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+ 
+    </style>
+</head>
+<body>
+    <h1>
+        Random Quote Generator
+    </h1>
+    <div id="quote"></div>
+    </div>
+    <button id="btn" onclick="generateQuotes()" >
+        Generate QUOTE
+    </button>
+   
+    <script>
+        const quotes = [
+  "The only way to do great work is to love what you do.",
+  "Life is what happens when you're busy making other plans.",
+  "The journey of a thousand miles begins with a single step.",
+  "The only person you are destined to become is the person you decide to be.",
+  "Life is not about waiting for the storm to pass, it's about learning to dance in the rain.",
+  "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+  "The only thing that stands between you and your dream is the will to try and the belief that it is actually possible.",
+  "Happiness is not something ready made. It comes from your own actions.",
+  "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+  "The best way to predict the future is to create it."
+];
+function generateQuotes(){
+    var num=Math.floor(Math.random() * 10);
+    var quoteElement=document.getElementById("quote");
+    quoteElement.innerText=quotes[num];
+}
+
+    </script>
+</body>
+</html>
